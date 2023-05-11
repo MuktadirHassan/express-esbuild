@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Only used when compiling with tsc
+    "module": "NodeNext", // Only used when compiling with tsc
+    "moduleResolution": "nodenext",
+    "lib": ["ESNext"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "outDir": "tsc-out"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
