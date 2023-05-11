@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2020", // Only used when compiling with tsc
-    "module": "NodeNext", // Only used when compiling with tsc
-    "moduleResolution": "nodenext",
+    "target": "ESNext",
+    "module": "CommonJS",
     "lib": ["ESNext"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

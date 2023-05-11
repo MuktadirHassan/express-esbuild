@@ -1,5 +1,6 @@
 import app from "./app";
 import prisma from "./config/prisma";
+
 const port = 3000;
 
 const server = app.listen(port, () => {
