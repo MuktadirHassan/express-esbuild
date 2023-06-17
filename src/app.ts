@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/healthcheck", (req, res) => {
-  const a = adder();
+  adder();
   res.send("OK");
 });
 
