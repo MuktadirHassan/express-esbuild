@@ -1,6 +1,8 @@
 import express from "express";
 import { log } from "node:console";
 import fs from "node:fs/promises";
+import adder from "./utils/adder";
+
 const app = express();
 
 app.get("/", (req, res) => {
@@ -13,6 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/healthcheck", (req, res) => {
+  const a = adder();
   res.send("OK");
 });
 
