@@ -1,11 +1,10 @@
 import { build } from "esbuild";
 
-// Automatically bundle all .ts files in the src/ directory
 build({
   entryPoints: ["src/server.ts"],
   outfile: "dist/index.js",
   platform: "node",
-  minify: true,
+  minify: false,
   bundle: true,
   sourcemap: true,
   treeShaking: true,
