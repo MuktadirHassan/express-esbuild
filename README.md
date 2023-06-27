@@ -31,8 +31,7 @@ yarn install
         target: 'node', // Typescript target option is not supported
     }
   ```
-- typescript `paths`, `baseUrl` doesn't seem to work right now.
-- [Learn More](https://esbuild.github.io/content-types/#no-type-system)
+- typescript `paths`, `baseUrl` doesn't seem to work right now. [Learn More](https://esbuild.github.io/content-types/#no-type-system)
 
 - `--enable-source-maps` option needs to be passed to `node` to enable source maps.
 
