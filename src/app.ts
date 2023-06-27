@@ -1,21 +1,12 @@
 import express from "express";
-import { log } from "node:console";
-import fs from "node:fs/promises";
-import adder from "./utils/adder";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  fs.mkdir("test").then(() => {
-    log("test");
-  });
-  res.json({
-    message: "Hello World",
-  });
+  res.send("Hello World!");
 });
 
-app.get("/healthcheck", (req, res) => {
-  adder();
+app.get("/_healthcheck", (req, res) => {
   res.send("OK");
 });
 
