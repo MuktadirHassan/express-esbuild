@@ -23,6 +23,7 @@
   "scripts": {
     "start": "node --enable-source-maps dist/index.js",
     "dev": "ts-node-dev src/server.ts --respawn --transpileOnly",
+    "prebuild": "tsc --noEmit",
     "build": "node esbuild.config.mjs"
   }
 }
