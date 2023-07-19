@@ -1,52 +1,45 @@
-import { Request, Response, NextFunction } from "express";
+import { ErrorRequestHandler, Response } from "express";
 
-class AppError extends Error {
-  statusCode: number;
-  status: string;
-  isOperational: boolean;
+class ServerError extends Error {
+  public statusCode: number;
 
-  constructor(message: string, statusCode: number) {
+  constructor(statusCode: number, message: string, stack?: string) {
     super(message);
     this.statusCode = statusCode;
-    this.status = `${statusCode}`.startsWith("4") ? "fail" : "error";
-    this.isOperational = true;
-
+    this.stack = stack;
     Error.captureStackTrace(this, this.constructor);
   }
 }
 
 class ErrorHandler {
-  static handleGlobalError(
-    error: AppError,
-    req: Request,
-    res: Response,
-    next: NextFunction
-  ) {
+  static handleGlobalError: ErrorRequestHandler = (err, req, res, next) => {
+    let error = err;
     error.statusCode = error.statusCode || 500;
-    error.message = error.message || "Internal server error";
+    error.message = error.message || "Internal Server Error";
 
     if (process.env.NODE_ENV === "development") {
       ErrorHandler.sendErrorDev(error, res);
-    } else {
+    }
+
+    if (process.env.NODE_ENV === "production") {
       ErrorHandler.sendErrorProd(error, res);
     }
-  }
+  };
 
-  private static sendErrorDev(error: AppError, res: Response) {
-    res.status(error.statusCode).json({
-      status: error.status,
+  private static sendErrorDev(error: ServerError, res: Response) {
+    return res.status(error.statusCode).json({
       error: {
+        name: error.name,
         message: error.message,
         stack: error.stack,
       },
     });
   }
 
-  private static sendErrorProd(error: AppError, res: Response) {
+  private static sendErrorProd(error: ServerError, res: Response) {
     // Log the error (e.g., to a logging service)
 
-    res.status(error.statusCode).json({
-      status: error.status,
+    return res.status(error.statusCode).json({
       error: {
         message: error.message,
       },
@@ -54,4 +47,4 @@ class ErrorHandler {
   }
 }
 
-export { AppError, ErrorHandler };
+export { ServerError, ErrorHandler };

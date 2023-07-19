@@ -29,3 +29,13 @@ process.on("unhandledRejection", (err) => {
   console.log("Unhandled Rejection: ", err);
   process.exit(1);
 });
+
+process.on("SIGTERM", () => {
+  server.close();
+  console.log("SIGTERM received");
+});
+
+process.on("SIGINT", () => {
+  server.close();
+  console.log("SIGINT received");
+});

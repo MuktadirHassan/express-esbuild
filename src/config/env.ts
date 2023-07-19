@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { z } from "zod";
-import { AppError } from "../utils/Error";
+import { ServerError } from "../utils/Error";
 
 const appEnvSchema = z
   .object({
@@ -18,7 +18,7 @@ if (!env.success) {
     .map((issue) => `${issue.path.join(".")} ${issue.message}`)
     .join(", ");
 
-  throw new AppError(errMessage, 500);
+  throw new ServerError(500, errMessage);
 }
 
 export default env.data;
