@@ -52,6 +52,7 @@ For now, I am thinking about:
 
 1. Improving documentation
 2. Add a logger
+3. Dockerize the app (High priority)
 
 Things I won't be adding:
 

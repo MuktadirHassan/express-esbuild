@@ -14,19 +14,20 @@ const server = app.listen(env.PORT, () => {
   console.log(`Server running at ${env.PORT}`);
 });
 
-server.on("close", (code: any) => {
-  console.log(`Server stopped with code ${code}`);
+server.on("close", () => {
+  console.log("Server closed");
+  process.exit(0);
 });
 
 process.on("uncaughtException", (err) => {
-  server.close();
   console.log("Uncaught Exception: ", err);
+  server.close();
   process.exit(1);
 });
 
 process.on("unhandledRejection", (err) => {
-  server.close();
   console.log("Unhandled Rejection: ", err);
+  server.close();
   process.exit(1);
 });
 
