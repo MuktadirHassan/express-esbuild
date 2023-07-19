@@ -2,16 +2,16 @@
 
 ## Description
 
-This is a boilerplate for `express` api's that can be used to quickly start a new project.
+Biolerplate for getting started with a express server using typescript, prisma and esbuild.
 
 ## Tools and Technologies
 
 - Express
 - Typescript
-- Prisma
 - ESbuild
+- Prisma
 
-## Getting Started
+## Usage
 
 Clone the repository and install the dependencies
 
@@ -19,12 +19,15 @@ Clone the repository and install the dependencies
 git clone
 cd express-typescript-boilerplate
 yarn install
+yarn dev # for development
+yarn build # for production
+yarn start # for production
 ```
 
 # Caveats and Gotchas
 
 - typescript is used for type checking only. It is not used to transpile the code. For production builds, `esbuild` is used to transpile the code.
-- esbuild currently supports only few of the tsconfig options.
+- `esbuild` currently supports only few of the tsconfig options.
 - ```mjs
     buildOptions: {
         format: 'esm' | 'cjs' | 'iife', // Typescript module option is not supported
@@ -40,3 +43,16 @@ yarn install
 ## Good to know
 
 - package.json `type:module` must be used for typescript `module: 'esnext'` to work. Default is `commonjs`.
+
+## Roadmap
+
+This will be a light weight boilerplate. I won't be adding too much features to it. Feel free to fork and add your own features.
+
+For now, I am thinking about:
+
+1. Improving documentation
+2. Add a logger
+
+Things I won't be adding:
+
+1. Authentication
