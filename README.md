@@ -14,8 +14,8 @@ This is a boilerplate for getting started with an Express server using Typescrip
 1. Clone the repository and navigate to the project directory:
 
 ```bash
-git clone <repository_url>
-cd express-typescript-boilerplate
+git clone https://github.com/MuktadirHassan/express-esbuild.git>
+cd express-esbuild
 ```
 
 Install the project dependencies:
