@@ -9,9 +9,10 @@
   "devDependencies": {
     "@types/express": "^4.17.17",
     "@types/node": "^20.3.1",
-    "esbuild": "^0.17.18",
+    "esbuild": "^0.18.19",
+    "esbuild-register": "^3.4.2",
+    "nodemon": "^3.0.1",
     "prisma": "^4.13.0",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   },
   "dependencies": {
@@ -22,7 +23,7 @@
   },
   "scripts": {
     "start": "node --enable-source-maps dist/index.js",
-    "dev": "ts-node-dev src/server.ts --respawn --transpileOnly",
+    "dev": "nodemon --exec \"tsc --noEmit && node -r esbuild-register src/server.ts\" -e .ts",
     "prebuild": "tsc --noEmit",
     "build": "node esbuild.config.mjs"
   }

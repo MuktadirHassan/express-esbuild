@@ -3,6 +3,7 @@ import app from "./app";
 import prisma from "./config/prisma";
 
 const server = app.listen(env.PORT, () => {
+  console.log(`Server running at ${env.PORT}`);
   prisma
     .$connect()
     .then(() => {
@@ -11,7 +12,6 @@ const server = app.listen(env.PORT, () => {
     .catch((err: Error) => {
       throw err;
     });
-  console.log(`Server running at ${env.PORT}`);
 });
 
 server.on("close", () => {
