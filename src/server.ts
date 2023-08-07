@@ -4,6 +4,7 @@ import prisma from "./config/prisma";
 
 const server = app.listen(env.PORT, () => {
   console.log(`Server running at ${env.PORT}`);
+  throw new Error("Test Error");
   prisma
     .$connect()
     .then(() => {

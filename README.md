@@ -1,59 +1,89 @@
-# Express-Typescript Boilerplate
-
 ## Description
 
-Biolerplate for getting started with a express server using typescript, prisma and esbuild.
+This is a boilerplate for getting started with an Express server using Typescript, Prisma, and ESbuild. It provides a basic setup to quickly kickstart your Express-based projects.
 
 ## Tools and Technologies
 
-- Express
-- Typescript
-- ESbuild
-- Prisma
+- Express: A popular web framework for Node.js.
+- Typescript: A superset of JavaScript that adds static typing.
+- ESbuild: A fast JavaScript bundler and minifier.
+- Prisma: An open-source database toolkit for TypeScript and Node.js.
 
 ## Usage
 
-Clone the repository and install the dependencies
+1. Clone the repository and navigate to the project directory:
 
 ```bash
-git clone
+git clone <repository_url>
 cd express-typescript-boilerplate
-yarn install
-yarn dev # for development
-yarn build # for production
-yarn start # for production
 ```
 
-# Caveats and Gotchas
+Install the project dependencies:
 
-- typescript is used for type checking only. It is not used to transpile the code. For production builds, `esbuild` is used to transpile the code.
-- `esbuild` currently supports only few of the tsconfig options.
-- ```mjs
-    buildOptions: {
-        format: 'esm' | 'cjs' | 'iife', // Typescript module option is not supported
-        target: 'node', // Typescript target option is not supported
-    }
-  ```
-- typescript `paths`, `baseUrl` doesn't seem to work right now. [Learn More](https://esbuild.github.io/content-types/#no-type-system)
+```bash
+yarn install
+```
 
-- `--enable-source-maps` option needs to be passed to `node` to enable source maps.
+Start the development server:
 
-- Run `tsc` separately to check for type errors.
+```bash
+yarn dev
+```
+
+For production, build the project using ESbuild:
+
+```bash
+yarn build
+```
+
+Start the production server:
+
+```bash
+yarn start
+```
+
+## Caveats and Gotchas
+
+- Typescript is used for type checking only and not for transpiling the code. For production builds, esbuild is used for transpilation.
+- Some of the tsconfig options are not supported by esbuild. Current supported build options are:
+
+```mjs
+  buildOptions: {
+    format: 'esm' | 'cjs' | 'iife', // Typescript module option is not supported
+    target: 'node', // Typescript target option is not supported
+  }
+```
+
+- Typescript paths and baseUrl do not seem to work with esbuild. Follow ➡️ [https://esbuild.github.io/content-types/#no-type-system](https://esbuild.github.io/content-types/#no-type-system)
+
+- We need sourcemaps for debugging. esbuild does not generate sourcemaps by default. We need to explicitly set the sourcemap option to true. Follow ➡️ [https://esbuild.github.io/api/#sourcemap](https://esbuild.github.io/api/#sourcemap). To enable sourcemaps in node, we need to set the `--enable-source-maps` flag.
+
+- Using `tsc` separately to check for type errors.
 
 ## Good to know
 
-- package.json `type:module` must be used for typescript `module: 'esnext'` to work. Default is `commonjs`.
+In the package.json, set "type": "module" to enable module: 'esnext' for TypeScript to work. The default is `commonjs` and it ignores the module option in tsconfig.json.
 
 ## Roadmap
 
-This will be a light weight boilerplate. I won't be adding too much features to it. Feel free to fork and add your own features.
+This boilerplate aims to be lightweight, and additional features will be kept to a minimum. Feel free to fork and add your own features.
 
-For now, I am thinking about:
+Planned improvements:
 
-1. Improving documentation
-2. Add a logger
-3. Dockerize the app (High priority)
+- Improved documentation
+- Add a logger
+- Dockerize the app (High priority)
 
-Things I won't be adding:
+Things that won't be added to this boilerplate:
 
-1. Authentication
+- Authentication
+
+## License
+
+Copyright (c) 2023 Muktadir Hassan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

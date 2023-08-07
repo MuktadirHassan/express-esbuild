@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "node --enable-source-maps dist/index.js",
-    "dev": "nodemon --exec \"tsc --noEmit && node -r esbuild-register src/server.ts\" -e .ts",
+    "dev": "nodemon --exec \"node -r esbuild-register src/server.ts\" -e .ts",
     "prebuild": "tsc --noEmit",
     "build": "node esbuild.config.mjs"
   }
