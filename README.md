@@ -1,13 +1,14 @@
 ## Description
 
-This is a boilerplate for getting started with an Express server using Typescript, Prisma, and ESbuild. It provides a basic setup to quickly kickstart your Express-based projects.
+This is a boilerplate for getting started with an Express server using Typescript, Prisma, Kysely and ESbuild. It provides a basic setup to quickly kickstart your Express-based projects.
 
 ## Tools and Technologies
 
 - Express: A popular web framework for Node.js.
 - Typescript: A superset of JavaScript that adds static typing.
 - ESbuild: A fast JavaScript bundler and minifier.
-- Prisma: An open-source database toolkit for TypeScript and Node.js.
+- Kysely: A SQL query builder for Typescript.
+- Prisma: An open-source database toolkit for TypeScript and Node.js. Used for migrations and type generation for Kyseley. Don't need to use Prisma Client for this boilerplate.
 
 ## Usage
 
