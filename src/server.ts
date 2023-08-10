@@ -1,43 +1,40 @@
 import env from "./config/env";
 import app from "./app";
-import prisma from "./config/prisma";
+import { logger } from "./config/logger";
 
 const server = app.listen(env.PORT, () => {
-  console.log(`Server running at ${env.PORT}`);
-  throw new Error("Test Error");
-  prisma
-    .$connect()
-    .then(() => {
-      console.log("Connected to database");
-    })
-    .catch((err: Error) => {
-      throw err;
-    });
+  logger.info(`Server running at ${env.PORT}`);
 });
 
 server.on("close", () => {
-  console.log("Server closed");
-  process.exit(0);
+  logger.info("Server closed");
+});
+
+process.on("unhandledRejection", (reason) => {
+  logger.fatal(reason, "Unhandled Rejection occured");
+  throw reason;
 });
 
 process.on("uncaughtException", (err) => {
-  console.log("Uncaught Exception: ", err);
-  server.close();
-  process.exit(1);
-});
+  logger.fatal(err, "Uncaught Exception occured");
+  // shutdown server gracefully
+  server.close(() => {
+    process.exit(1);
+  });
 
-process.on("unhandledRejection", (err) => {
-  console.log("Unhandled Rejection: ", err);
-  server.close();
+  // If a graceful shutdown is not possible, force exit the process
+  setTimeout(() => {
+    process.abort(); //exit immediately and generate a core dump file
+  }, 5000).unref();
   process.exit(1);
 });
 
 process.on("SIGTERM", () => {
   server.close();
-  console.log("SIGTERM received");
+  logger.info("SIGTERM received");
 });
 
 process.on("SIGINT", () => {
   server.close();
-  console.log("SIGINT received");
+  logger.info("SIGINT received");
 });
