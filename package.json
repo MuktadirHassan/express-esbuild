@@ -26,7 +26,7 @@
     "kysely": "^0.26.1",
     "pg": "^8.11.2",
     "pino": "^8.15.0",
-    "zod": "^3.21.4"
+    "zod": "^3.22.2"
   },
   "scripts": {
     "start": "node --enable-source-maps dist/index.js",
