@@ -1,5 +1,5 @@
 import express from "express";
-import { ErrorHandler } from "./utils/Error";
+import { handleGlobalError } from "./utils/Error";
 
 const app = express();
 
@@ -11,6 +11,6 @@ app.get("/_healthcheck", (req, res) => {
   res.send("OK");
 });
 
-app.use(ErrorHandler.handleGlobalError);
+app.use(handleGlobalError);
 
 export default app;
