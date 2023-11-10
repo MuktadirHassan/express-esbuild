@@ -15,6 +15,16 @@ interface ApiResponse<T> {
   data?: T;
   error?: T;
 }
+
+const determineStatus = (statusCode: number): ApiResponseStatus => {
+  if (statusCode >= 400 && statusCode < 500) {
+    return ApiResponseStatus.error;
+  } else if (statusCode >= 500) {
+    return ApiResponseStatus.fail;
+  }
+  return ApiResponseStatus.success;
+};
+
 /**
  * Sends API response
  *
@@ -32,23 +42,14 @@ const sendApiResponse = <T>(
   message: string,
   data?: T
 ) => {
+  const status = determineStatus(statusCode);
   const apiResponse = {
+    status,
     message,
+    data: status === ApiResponseStatus.success ? data : undefined,
+    error: status !== ApiResponseStatus.success ? data : undefined,
   } as ApiResponse<T>;
-  // Set proper status
-  apiResponse.status = ApiResponseStatus.success;
-  if (statusCode >= 400 && statusCode < 500) {
-    apiResponse.status = ApiResponseStatus.error;
-  } else if (statusCode >= 500) {
-    apiResponse.status = ApiResponseStatus.fail;
-  }
-  // Set data
-  if (apiResponse.status === ApiResponseStatus.success) {
-    apiResponse.data = data;
-  } else {
-    apiResponse.error = data;
-  }
 
-  return res.status(statusCode).json(apiResponse);
+  res.status(statusCode).json(apiResponse);
 };
 export default sendApiResponse;
