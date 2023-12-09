@@ -38,8 +38,8 @@ devDependencies:
     specifier: ^20.10.3
     version: 20.10.3
   '@types/pg':
-    specifier: ^8.10.2
-    version: 8.10.2
+    specifier: ^8.10.9
+    version: 8.10.9
   esbuild:
     specifier: ^0.19.5
     version: 0.19.5
@@ -614,8 +614,8 @@ packages:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
 
-  /@types/pg@8.10.2:
-    resolution: {integrity: sha512-MKFs9P6nJ+LAeHLU3V0cODEOgyThJ3OAnmOlsZsxux6sfQs3HRXR5bBn7xG5DjckEFhTAxsXi7k7cd0pCMxpJw==}
+  /@types/pg@8.10.9:
+    resolution: {integrity: sha512-UksbANNE/f8w0wOMxVKKIrLCbEMV+oM1uKejmwXr39olg4xqcfBDbXxObJAt6XxHbDa4XTKOlUEcEltXDX+XLQ==}
     dependencies:
       '@types/node': 20.10.3
       pg-protocol: 1.6.0
