@@ -59,8 +59,8 @@ devDependencies:
     specifier: ^1.7.0
     version: 1.7.0
   typescript:
-    specifier: ^5.1.6
-    version: 5.1.6
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
@@ -2407,7 +2407,7 @@ packages:
       '@mrleebo/prisma-ast': 0.6.0
       '@prisma/generator-helper': 4.13.0
       '@prisma/internals': 4.13.0
-      typescript: 5.1.6
+      typescript: 5.3.3
       zod: 3.22.4
     transitivePeerDependencies:
       - encoding
@@ -2973,8 +2973,8 @@ packages:
       mime-types: 2.1.35
     dev: false
 
-  /typescript@5.1.6:
-    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+  /typescript@5.3.3:
+    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
