@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^3.4.2
     version: 3.4.2(esbuild@0.19.11)
   nodemon:
-    specifier: ^3.0.1
-    version: 3.0.1
+    specifier: ^3.0.2
+    version: 3.0.2
   pino-pretty:
     specifier: ^10.2.3
     version: 10.2.3
@@ -391,7 +391,7 @@ packages:
     resolution: {integrity: sha512-JrltTewF/paRb5mcM5OvcEi9DtdX0sINOAswruxKQrwOLA7Phqb52OfY38MIzGrsrJ8iUGVqQ5bpYZYpxOGCsQ==}
     dependencies:
       '@types/debug': 4.1.7
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
       strip-ansi: 6.0.1
     transitivePeerDependencies:
       - supports-color
@@ -680,7 +680,7 @@ packages:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1109,19 +1109,7 @@ packages:
       ms: 2.0.0
     dev: false
 
-  /debug@3.2.7(supports-color@5.5.0):
-    resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    dependencies:
-      ms: 2.1.3
-      supports-color: 5.5.0
-    dev: true
-
-  /debug@4.3.4:
+  /debug@4.3.4(supports-color@5.5.0):
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
@@ -1131,6 +1119,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.2
+      supports-color: 5.5.0
     dev: true
 
   /defaults@1.0.4:
@@ -1215,7 +1204,7 @@ packages:
     peerDependencies:
       esbuild: '>=0.12 <1'
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
       esbuild: 0.19.11
     transitivePeerDependencies:
       - supports-color
@@ -1595,7 +1584,7 @@ packages:
     dependencies:
       '@tootallnate/once': 2.0.0
       agent-base: 6.0.2
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1605,7 +1594,7 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       agent-base: 6.0.2
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1979,13 +1968,13 @@ packages:
       whatwg-url: 5.0.0
     dev: true
 
-  /nodemon@3.0.1:
-    resolution: {integrity: sha512-g9AZ7HmkhQkqXkRc20w+ZfQ73cHLbE8hnPbtaFbFtCumZsjyMhKk9LajQ07U5Ux28lvFjZ5X7HvWR1xzU8jHVw==}
+  /nodemon@3.0.2:
+    resolution: {integrity: sha512-9qIN2LNTrEzpOPBaWHTm4Asy1LxXLSickZStAQ4IZe7zsoIpD/A7LWxhZV3t4Zu352uBcqVnRsDXSMR2Sc3lTA==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       chokidar: 3.5.3
-      debug: 3.2.7(supports-color@5.5.0)
+      debug: 4.3.4(supports-color@5.5.0)
       ignore-by-default: 1.0.1
       minimatch: 3.1.2
       pstree.remy: 1.1.8
