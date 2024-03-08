@@ -1,9 +1,20 @@
 import env from "./config/env";
 import app from "./app";
 import { logger } from "./config/logger";
+import { db } from "./config/database";
+import { sql } from "kysely";
 
 const server = app.listen(env.PORT, () => {
   logger.info(`Server running at ${env.PORT}`);
+  logger.trace(`Trying to connect to database`);
+  sql`SELECT 1`
+    .execute(db)
+    .then(() => {
+      logger.info(`Database connected`);
+    })
+    .catch((err) => {
+      logger.error(err, "Database connection failed");
+    });
 });
 
 server.on("close", () => {

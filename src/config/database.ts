@@ -2,14 +2,15 @@ import { DB } from "../types/types";
 import { Pool } from "pg";
 import { Kysely, PostgresDialect } from "kysely";
 import { logger } from "./logger";
+import env from "./env";
 
 const dialect = new PostgresDialect({
   pool: new Pool({
-    host: "localhost",
-    database: "payment_server",
-    user: "postgres",
-    password: "root",
-    port: 5432,
+    database: env.DB_NAME,
+    host: env.DB_HOST,
+    user: env.DB_USER,
+    password: env.DB_PASSWORD,
+    port: Number(env.DB_PORT),
     max: 20,
   }),
 });

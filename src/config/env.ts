@@ -8,6 +8,13 @@ const appEnvSchema = z
     NODE_ENV: z
       .string()
       .refine((value) => ["development", "production"].includes(value)),
+    DATABASE_URL: z.string(),
+
+    DB_USER: z.string(),
+    DB_PASSWORD: z.string(),
+    DB_HOST: z.string(),
+    DB_PORT: z.string(),
+    DB_NAME: z.string(),
   })
   .required();
 
