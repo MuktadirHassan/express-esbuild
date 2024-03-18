@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^5.10.2
     version: 5.10.2
   prisma-kysely:
-    specifier: ^1.7.1
-    version: 1.7.1
+    specifier: ^1.8.0
+    version: 1.8.0
   typescript:
     specifier: ^5.4.2
     version: 5.4.2
@@ -2283,8 +2283,8 @@ packages:
     resolution: {integrity: sha512-VdlZoocy5lCP0c/t66xAfclglEapXPCIVhqqJRncYpvbCgImF0w67aPKfbqUMr72tO2k5q0TdTZwCLjPTI6C9g==}
     dev: true
 
-  /prisma-kysely@1.7.1:
-    resolution: {integrity: sha512-fGMqC1SBEujdmbFOntNXjpNjVMUg0w1kXM48y9IbKsCeQDV+KLJWvCG034S/w2e8j7Wx8ciapJQwQ2MR//bIxQ==}
+  /prisma-kysely@1.8.0:
+    resolution: {integrity: sha512-VpNpolZ8RXRgfU+j4R+fPZmX8EE95w3vJ2tt7+FwuiQc0leNTfLK5QLf3KbbPDes2rfjh3g20AjDxefQIo5GIA==}
     hasBin: true
     dependencies:
       '@mrleebo/prisma-ast': 0.7.0
