@@ -19,6 +19,14 @@ const server = app.listen(env.PORT, () => {
 
 server.on("close", () => {
   logger.info("Server closed");
+  db.destroy()
+    .then(() => {
+      logger.info("Database connection closed");
+    })
+    .catch((err) => {
+      logger.error(err, "Error closing database connection");
+    });
+  process.exit(0);
 });
 
 process.on("unhandledRejection", (reason) => {
