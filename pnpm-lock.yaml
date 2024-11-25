@@ -61,8 +61,8 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0
       typescript:
-        specifier: ^5.5.2
-        version: 5.5.2
+        specifier: ^5.7.2
+        version: 5.7.2
 
 packages:
 
@@ -1663,8 +1663,8 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
-  typescript@5.5.2:
-    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3100,7 +3100,7 @@ snapshots:
       '@mrleebo/prisma-ast': 0.7.0
       '@prisma/generator-helper': 5.3.1
       '@prisma/internals': 5.3.1
-      typescript: 5.5.2
+      typescript: 5.7.2
       zod: 3.23.8
     transitivePeerDependencies:
       - encoding
@@ -3457,7 +3457,7 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typescript@5.5.2: {}
+  typescript@5.7.2: {}
 
   undefsafe@2.0.5: {}
 
