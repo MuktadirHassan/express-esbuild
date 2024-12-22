@@ -17,7 +17,7 @@
     "pino-pretty": "^11.2.2",
     "prisma": "^6.0.1",
     "prisma-kysely": "^1.8.0",
-    "typescript": "^5.5.2"
+    "typescript": "^5.7.2"
   },
   "dependencies": {
     "cors": "^2.8.5",
