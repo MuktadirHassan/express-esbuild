@@ -15,7 +15,7 @@
     "esbuild-register": "^3.6.0",
     "nodemon": "^3.1.7",
     "pino-pretty": "^11.2.2",
-    "prisma": "^6.0.1",
+    "prisma": "^6.3.1",
     "prisma-kysely": "^1.8.0",
     "typescript": "^5.7.2"
   },
