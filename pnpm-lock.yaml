@@ -18,8 +18,8 @@ importers:
         specifier: ^4.21.2
         version: 4.21.2
       kysely:
-        specifier: ^0.27.4
-        version: 0.27.4
+        specifier: ^0.28.1
+        version: 0.28.1
       pg:
         specifier: ^8.13.1
         version: 8.13.1
@@ -945,9 +945,9 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  kysely@0.27.4:
-    resolution: {integrity: sha512-dyNKv2KRvYOQPLCAOCjjQuCk4YFd33BvGdf/o5bC7FiW+BB6snA81Zt+2wT9QDFzKqxKa5rrOmvlK/anehCcgA==}
-    engines: {node: '>=14.0.0'}
+  kysely@0.28.1:
+    resolution: {integrity: sha512-umkhsHB0y2JvI83DUtuYYTfvr063xTHTcr/k1z0E2Bg39zGiBcdDvlbP79YMcItn55pKQtD120sZmKa9jhCVtw==}
+    engines: {node: '>=18.0.0'}
 
   lazystream@1.0.1:
     resolution: {integrity: sha512-b94GiNHQNy6JNTrt5w6zNyffMrNkXZb3KTkCZJb2V1xaEGCk093vkZ2jk3tpaeP33/OiXC+WvK9AxUebnf5nbw==}
@@ -2694,7 +2694,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  kysely@0.27.4: {}
+  kysely@0.28.1: {}
 
   lazystream@1.0.1:
     dependencies:
