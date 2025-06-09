@@ -9,7 +9,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.15.30",
     "@types/pg": "^8.11.10",
     "esbuild": "^0.25.1",
     "esbuild-register": "^3.6.0",
