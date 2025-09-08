@@ -13,7 +13,7 @@
     "@types/pg": "^8.11.11",
     "esbuild": "^0.25.1",
     "esbuild-register": "^3.6.0",
-    "nodemon": "^3.1.7",
+    "nodemon": "^3.1.10",
     "pino-pretty": "^13.0.0",
     "prisma": "^6.5.0",
     "prisma-kysely": "^1.8.0",
