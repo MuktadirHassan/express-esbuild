@@ -56,13 +56,13 @@ importers:
         version: 13.0.0
       prisma:
         specifier: ^6.18.0
-        version: 6.18.0(typescript@5.9.2)
+        version: 6.18.0(typescript@6.0.3)
       prisma-kysely:
         specifier: ^1.8.0
         version: 1.8.0
       typescript:
-        specifier: ^5.9.2
-        version: 5.9.2
+        specifier: ^6.0.3
+        version: 6.0.3
 
 packages:
 
@@ -1730,8 +1730,13 @@ packages:
     resolution: {integrity: sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==}
     engines: {node: '>= 0.6'}
 
-  typescript@5.9.2:
-    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3223,18 +3228,18 @@ snapshots:
       '@mrleebo/prisma-ast': 0.7.0
       '@prisma/generator-helper': 5.3.1
       '@prisma/internals': 5.3.1
-      typescript: 5.9.2
+      typescript: 5.9.3
       zod: 3.25.76
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  prisma@6.18.0(typescript@5.9.2):
+  prisma@6.18.0(typescript@6.0.3):
     dependencies:
       '@prisma/config': 6.18.0
       '@prisma/engines': 6.18.0
     optionalDependencies:
-      typescript: 5.9.2
+      typescript: 6.0.3
     transitivePeerDependencies:
       - magicast
 
@@ -3556,7 +3561,9 @@ snapshots:
       media-typer: 0.3.0
       mime-types: 2.1.35
 
-  typescript@5.9.2: {}
+  typescript@5.9.3: {}
+
+  typescript@6.0.3: {}
 
   undefsafe@2.0.5: {}
 
