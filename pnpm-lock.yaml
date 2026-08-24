@@ -16,13 +16,13 @@ importers:
         version: 16.4.7
       express:
         specifier: ^4.21.2
-        version: 4.21.2
+        version: 4.21.2(supports-color@5.5.0)
       kysely:
         specifier: ^0.29.2
         version: 0.29.2
       pg:
-        specifier: ^8.20.0
-        version: 8.20.0
+        specifier: ^8.23.0
+        version: 8.23.0
       pino:
         specifier: ^10.3.1
         version: 10.3.1
@@ -40,14 +40,14 @@ importers:
         specifier: ^24.3.1
         version: 24.3.1
       '@types/pg':
-        specifier: ^8.20.0
-        version: 8.20.0
+        specifier: ^8.23.1
+        version: 8.23.1
       esbuild:
         specifier: ^0.28.1
         version: 0.28.1
       esbuild-register:
         specifier: ^3.6.0
-        version: 3.6.0(esbuild@0.28.1)
+        version: 3.6.0(esbuild@0.28.1)(supports-color@5.5.0)
       nodemon:
         specifier: ^3.1.10
         version: 3.1.10
@@ -59,7 +59,7 @@ importers:
         version: 6.18.0(typescript@5.9.2)
       prisma-kysely:
         specifier: ^1.8.0
-        version: 1.8.0
+        version: 1.8.0(supports-color@5.5.0)
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
@@ -348,14 +348,17 @@ packages:
   '@types/ms@0.7.31':
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
 
+  '@types/node@24.13.3':
+    resolution: {integrity: sha512-Dh8vAsV36ig5wa9OX4pXvMc9D3Veibfw2wix0CUwYODLD8nkj9UsLjASr49nPg+2eKzxhBV+v7L8pXvT4e639Q==}
+
   '@types/node@24.3.1':
     resolution: {integrity: sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==}
 
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
 
-  '@types/pg@8.20.0':
-    resolution: {integrity: sha512-bEPFOaMAHTEP1EzpvHTbmwR8UsFyHSKsRisLIHVMXnpNefSbGA1bD6CVy+qKjGSqmZqNqBDV2azOBo8TgkcVow==}
+  '@types/pg@8.23.1':
+    resolution: {integrity: sha512-fKVHpikPdg4GKks3JuLEhvwSyvwzF23hnabPy6DD8ljVbC7+6J5dQzdv4arV6jqq57djnMgs1HKBxX4P8aBI3A==}
 
   '@types/qs@6.9.8':
     resolution: {integrity: sha512-u95svzDlTysU5xecFNTgfFG5RUWu1A9P0VzgpcIiGZA9iraHOdSzcxMxQ55DyeRaGCSxQi7LxXDI4rzq/MYfdg==}
@@ -1296,30 +1299,30 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  pg-cloudflare@1.3.0:
-    resolution: {integrity: sha512-6lswVVSztmHiRtD6I8hw4qP/nDm1EJbKMRhf3HCYaqud7frGysPv7FYJ5noZQdhQtN2xJnimfMtvQq21pdbzyQ==}
+  pg-cloudflare@1.4.0:
+    resolution: {integrity: sha512-Vo7z/6rrQYxpNRylp4Tlob2elzbh+N/MOQbxFVWCxS7oEx6jF53GTJFxK2WWpKuBRkmiin4Mt+xofFDjx09R0A==}
 
-  pg-connection-string@2.12.0:
-    resolution: {integrity: sha512-U7qg+bpswf3Cs5xLzRqbXbQl85ng0mfSV/J0nnA31MCLgvEaAo7CIhmeyrmJpOr7o+zm0rXK+hNnT5l9RHkCkQ==}
+  pg-connection-string@2.14.0:
+    resolution: {integrity: sha512-XwWDGcLRGCXAR8F/AM5bG7Q+A3Wm2s6QeEjlOKZLlH3UYcguiqCWKyWXVag5TLTIjR7oOJUY8kcADaZgWPyLeg==}
 
   pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-pool@3.13.0:
-    resolution: {integrity: sha512-gB+R+Xud1gLFuRD/QgOIgGOBE2KCQPaPwkzBBGC9oG69pHTkhQeIuejVIk3/cnDyX39av2AxomQiyPT13WKHQA==}
+  pg-pool@3.14.0:
+    resolution: {integrity: sha512-gKtPkFdQPU3DksooVLi9LsjZxrsBUZIpa+7aVx+LV5pNh0KzP4Zleud2po+ConrxbuXGBJ6Hfer6hdgpIBpBaw==}
     peerDependencies:
       pg: '>=8.0'
 
-  pg-protocol@1.13.0:
-    resolution: {integrity: sha512-zzdvXfS6v89r6v7OcFCHfHlyG/wvry1ALxZo4LqgUoy7W9xhBDMaqOuMiF3qEV45VqsN6rdlcehHrfDtlCPc8w==}
+  pg-protocol@1.16.0:
+    resolution: {integrity: sha512-sILXutLVjCLjcDuOmvhX5e2Z4cS5qG/6Bu3VkpFwdf/633ElGLpEh9bgmuI5I4sqKqkifQiGyiCcx1HdtrK7tg==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
     engines: {node: '>=4'}
 
-  pg@8.20.0:
-    resolution: {integrity: sha512-ldhMxz2r8fl/6QkXnBD3CR9/xg694oT6DZQ2s6c/RI28OjtSOpxnPrUCGOBJ46RCUxcWdx3p6kw/xnDHjKvaRA==}
+  pg@8.23.0:
+    resolution: {integrity: sha512-Ip2EQCngowJLGOfCwkFhPXU7/ljlhn6Rxlmy4XYfL2Y+vyRM59+8uR2xqRWKdYmbXmxCFOAmKxBuSUCdF34qLg==}
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -1711,6 +1714,9 @@ packages:
   undici-types@7.10.0:
     resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
 
+  undici-types@7.18.2:
+    resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
+
   unique-string@2.0.0:
     resolution: {integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==}
     engines: {node: '>=8'}
@@ -1914,10 +1920,10 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@prisma/debug@5.3.1':
+  '@prisma/debug@5.3.1(supports-color@5.5.0)':
     dependencies:
       '@types/debug': 4.1.8
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
       strip-ansi: 6.0.1
     transitivePeerDependencies:
       - supports-color
@@ -1935,16 +1941,16 @@ snapshots:
       '@prisma/fetch-engine': 6.18.0
       '@prisma/get-platform': 6.18.0
 
-  '@prisma/fetch-engine@5.3.1':
+  '@prisma/fetch-engine@5.3.1(supports-color@5.5.0)':
     dependencies:
-      '@prisma/debug': 5.3.1
-      '@prisma/get-platform': 5.3.1
+      '@prisma/debug': 5.3.1(supports-color@5.5.0)
+      '@prisma/get-platform': 5.3.1(supports-color@5.5.0)
       execa: 5.1.1
       find-cache-dir: 3.3.2
       fs-extra: 11.1.1
       hasha: 5.2.2
-      http-proxy-agent: 7.0.0
-      https-proxy-agent: 7.0.2
+      http-proxy-agent: 7.0.0(supports-color@5.5.0)
+      https-proxy-agent: 7.0.2(supports-color@5.5.0)
       kleur: 4.1.5
       node-fetch: 2.7.0
       p-filter: 2.1.0
@@ -1964,18 +1970,18 @@ snapshots:
       '@prisma/engines-version': 6.18.0-8.34b5a692b7bd79939a9a2c3ef97d816e749cda2f
       '@prisma/get-platform': 6.18.0
 
-  '@prisma/generator-helper@5.3.1':
+  '@prisma/generator-helper@5.3.1(supports-color@5.5.0)':
     dependencies:
-      '@prisma/debug': 5.3.1
+      '@prisma/debug': 5.3.1(supports-color@5.5.0)
       '@types/cross-spawn': 6.0.2
       cross-spawn: 7.0.3
       kleur: 4.1.5
     transitivePeerDependencies:
       - supports-color
 
-  '@prisma/get-platform@5.3.1':
+  '@prisma/get-platform@5.3.1(supports-color@5.5.0)':
     dependencies:
-      '@prisma/debug': 5.3.1
+      '@prisma/debug': 5.3.1(supports-color@5.5.0)
       escape-string-regexp: 4.0.0
       execa: 5.1.1
       fs-jetpack: 5.1.0
@@ -1992,15 +1998,15 @@ snapshots:
     dependencies:
       '@prisma/debug': 6.18.0
 
-  '@prisma/internals@5.3.1':
+  '@prisma/internals@5.3.1(supports-color@5.5.0)':
     dependencies:
       '@antfu/ni': 0.21.8
       '@opentelemetry/api': 1.4.1
-      '@prisma/debug': 5.3.1
+      '@prisma/debug': 5.3.1(supports-color@5.5.0)
       '@prisma/engines': 5.3.1
-      '@prisma/fetch-engine': 5.3.1
-      '@prisma/generator-helper': 5.3.1
-      '@prisma/get-platform': 5.3.1
+      '@prisma/fetch-engine': 5.3.1(supports-color@5.5.0)
+      '@prisma/generator-helper': 5.3.1(supports-color@5.5.0)
+      '@prisma/get-platform': 5.3.1(supports-color@5.5.0)
       '@prisma/prisma-schema-wasm': 5.3.1-2.61e140623197a131c2a6189271ffee05a7aa9a59
       archiver: 5.3.2
       arg: 5.0.2
@@ -2051,7 +2057,7 @@ snapshots:
 
   '@types/connect@3.4.36':
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.13.3
 
   '@types/cors@2.8.19':
     dependencies:
@@ -2059,7 +2065,7 @@ snapshots:
 
   '@types/cross-spawn@6.0.2':
     dependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.13.3
 
   '@types/debug@4.1.8':
     dependencies:
@@ -2087,16 +2093,20 @@ snapshots:
 
   '@types/ms@0.7.31': {}
 
+  '@types/node@24.13.3':
+    dependencies:
+      undici-types: 7.18.2
+
   '@types/node@24.3.1':
     dependencies:
       undici-types: 7.10.0
 
   '@types/normalize-package-data@2.4.1': {}
 
-  '@types/pg@8.20.0':
+  '@types/pg@8.23.1':
     dependencies:
-      '@types/node': 24.3.1
-      pg-protocol: 1.13.0
+      '@types/node': 24.13.3
+      pg-protocol: 1.16.0
       pg-types: 2.2.0
 
   '@types/qs@6.9.8': {}
@@ -2108,7 +2118,7 @@ snapshots:
   '@types/send@0.17.1':
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 24.3.1
+      '@types/node': 24.13.3
 
   '@types/serve-static@1.15.2':
     dependencies:
@@ -2121,7 +2131,7 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  agent-base@7.1.0:
+  agent-base@7.1.0(supports-color@5.5.0):
     dependencies:
       debug: 4.4.0(supports-color@5.5.0)
     transitivePeerDependencies:
@@ -2211,11 +2221,11 @@ snapshots:
       inherits: 2.0.4
       readable-stream: 3.6.2
 
-  body-parser@1.20.3:
+  body-parser@1.20.3(supports-color@5.5.0):
     dependencies:
       bytes: 3.1.2
       content-type: 1.0.5
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       http-errors: 2.0.0
@@ -2391,13 +2401,17 @@ snapshots:
 
   dateformat@4.6.3: {}
 
-  debug@2.6.9:
+  debug@2.6.9(supports-color@5.5.0):
     dependencies:
       ms: 2.0.0
+    optionalDependencies:
+      supports-color: 5.5.0
 
-  debug@4.3.4:
+  debug@4.3.4(supports-color@5.5.0):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
+      supports-color: 5.5.0
 
   debug@4.4.0(supports-color@5.5.0):
     dependencies:
@@ -2473,9 +2487,9 @@ snapshots:
 
   es-errors@1.3.0: {}
 
-  esbuild-register@3.6.0(esbuild@0.28.1):
+  esbuild-register@3.6.0(esbuild@0.28.1)(supports-color@5.5.0):
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.4(supports-color@5.5.0)
       esbuild: 0.28.1
     transitivePeerDependencies:
       - supports-color
@@ -2529,21 +2543,21 @@ snapshots:
       signal-exit: 3.0.7
       strip-final-newline: 2.0.0
 
-  express@4.21.2:
+  express@4.21.2(supports-color@5.5.0):
     dependencies:
       accepts: 1.3.8
       array-flatten: 1.1.1
-      body-parser: 1.20.3
+      body-parser: 1.20.3(supports-color@5.5.0)
       content-disposition: 0.5.4
       content-type: 1.0.5
       cookie: 0.7.1
       cookie-signature: 1.0.6
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
-      finalhandler: 1.3.1
+      finalhandler: 1.3.1(supports-color@5.5.0)
       fresh: 0.5.2
       http-errors: 2.0.0
       merge-descriptors: 1.0.3
@@ -2555,8 +2569,8 @@ snapshots:
       qs: 6.13.0
       range-parser: 1.2.1
       safe-buffer: 5.2.1
-      send: 0.19.0
-      serve-static: 1.16.2
+      send: 0.19.0(supports-color@5.5.0)
+      serve-static: 1.16.2(supports-color@5.5.0)
       setprototypeof: 1.2.0
       statuses: 2.0.1
       type-is: 1.6.18
@@ -2591,9 +2605,9 @@ snapshots:
     dependencies:
       to-regex-range: 5.0.1
 
-  finalhandler@1.3.1:
+  finalhandler@1.3.1(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       encodeurl: 2.0.0
       escape-html: 1.0.3
       on-finished: 2.4.1
@@ -2740,16 +2754,16 @@ snapshots:
       statuses: 2.0.1
       toidentifier: 1.0.1
 
-  http-proxy-agent@7.0.0:
+  http-proxy-agent@7.0.0(supports-color@5.5.0):
     dependencies:
-      agent-base: 7.1.0
+      agent-base: 7.1.0(supports-color@5.5.0)
       debug: 4.4.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
-  https-proxy-agent@7.0.2:
+  https-proxy-agent@7.0.2(supports-color@5.5.0):
     dependencies:
-      agent-base: 7.1.0
+      agent-base: 7.1.0(supports-color@5.5.0)
       debug: 4.4.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
@@ -3066,18 +3080,18 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  pg-cloudflare@1.3.0:
+  pg-cloudflare@1.4.0:
     optional: true
 
-  pg-connection-string@2.12.0: {}
+  pg-connection-string@2.14.0: {}
 
   pg-int8@1.0.1: {}
 
-  pg-pool@3.13.0(pg@8.20.0):
+  pg-pool@3.14.0(pg@8.23.0):
     dependencies:
-      pg: 8.20.0
+      pg: 8.23.0
 
-  pg-protocol@1.13.0: {}
+  pg-protocol@1.16.0: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -3087,15 +3101,15 @@ snapshots:
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
 
-  pg@8.20.0:
+  pg@8.23.0:
     dependencies:
-      pg-connection-string: 2.12.0
-      pg-pool: 3.13.0(pg@8.20.0)
-      pg-protocol: 1.13.0
+      pg-connection-string: 2.14.0
+      pg-pool: 3.14.0(pg@8.23.0)
+      pg-protocol: 1.16.0
       pg-types: 2.2.0
       pgpass: 1.0.5
     optionalDependencies:
-      pg-cloudflare: 1.3.0
+      pg-cloudflare: 1.4.0
 
   pgpass@1.0.5:
     dependencies:
@@ -3163,11 +3177,11 @@ snapshots:
     dependencies:
       xtend: 4.0.2
 
-  prisma-kysely@1.8.0:
+  prisma-kysely@1.8.0(supports-color@5.5.0):
     dependencies:
       '@mrleebo/prisma-ast': 0.7.0
-      '@prisma/generator-helper': 5.3.1
-      '@prisma/internals': 5.3.1
+      '@prisma/generator-helper': 5.3.1(supports-color@5.5.0)
+      '@prisma/internals': 5.3.1(supports-color@5.5.0)
       typescript: 5.9.2
       zod: 3.25.76
     transitivePeerDependencies:
@@ -3309,9 +3323,9 @@ snapshots:
 
   semver@7.7.1: {}
 
-  send@0.19.0:
+  send@0.19.0(supports-color@5.5.0):
     dependencies:
-      debug: 2.6.9
+      debug: 2.6.9(supports-color@5.5.0)
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
@@ -3327,12 +3341,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@1.16.2:
+  serve-static@1.16.2(supports-color@5.5.0):
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
       parseurl: 1.3.3
-      send: 0.19.0
+      send: 0.19.0(supports-color@5.5.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -3506,6 +3520,8 @@ snapshots:
   undefsafe@2.0.5: {}
 
   undici-types@7.10.0: {}
+
+  undici-types@7.18.2: {}
 
   unique-string@2.0.0:
     dependencies:
